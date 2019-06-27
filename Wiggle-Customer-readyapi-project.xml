@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="74e49f01-5bb5-4b27-8d7f-7cdd69e2fecd" created="2.4.0" activeEnvironment="Default environment" name="Wiggle_Customer" resourceRoot="" updated="2.4.0 2018-06-08T12:50:23Z" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="3c1e414d-5bf7-49ec-929c-71e7567349b2" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 21" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints/><con:resource name="/api/customers" path="/api/customers" id="10750d14-519e-487f-a8de-bfd82b845d12"><con:settings/><con:parameters/><con:method name="POST" id="64ae795b-6220-49f0-a6eb-87baa95d023e" method="POST"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>400 409 500 401</con:status><con:params/><con:element xmlns:cus="http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers">cus:Fault</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:cus="http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers">cus:Response</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html</con:mediaType><con:status>405</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="POST Request" id="99981ac1-baa3-4183-9b2a-bbdde92460ab" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="7fca7b1b-ca44-48e8-a519-3a1b7e33120a" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 22" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints/><con:resource name="/api/customers/context.expand(" path="/api/customers/${#TestCase#CID}" id="533fb43a-fec0-4be1-939d-ccde53780b94"><con:settings/><con:parameters/><con:method name="PATCH" id="bb57c2ae-e161-444b-b308-f5f2e0c0d213" method="PATCH"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>404</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>401 400 504</con:status><con:params/><con:element xmlns:x="http://x-customer-api-dev.uk-e1.cloudhub.io/">x:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:x="http://x-customer-api-dev.uk-e1.cloudhub.io/">x:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204 0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="PATCH Request" id="e2b39801-7cbb-402e-bc2b-705033db605d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://x-customer-api-dev.uk-e1.cloudhub.io/</con:originalUri><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method><con:method name="GET" id="05b8aff7-1440-4c3b-99d0-cbf7d6533529" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>401 504</con:status><con:params/><con:element xmlns:ns="http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers/6210764056">ns:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation><con:request name="Request 1" id="88290ce5-6f8f-43f8-9323-c3069698b0ff" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="a52d10ec-7a64-4261-8988-5cc350ae44b0" name="Customer Registration_WS"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8feb2bf1-c595-4577-b2ad-d3244707aa59" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="Customer_NoPWD_WS" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="properties" name="Properties" id="295320d0-f0db-4e48-bce4-865ba557d89c"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>File_Path</con:name><con:value>D:\lcldskf\Project\Wiggle\GIT_code\bmx-mulesofttest-scripts\Test Data\BMX_CustomerRegistration_WS_TD.xlsx</con:value></con:property><con:property><con:name>Credentials_Path</con:name><con:value>D:\lcldskf\Project\Wiggle\GIT_code\bmx-mulesofttest-scripts\BMX_Credentials.xlsx</con:value></con:property><con:property><con:name>UID</con:name><con:value>1</con:value></con:property><con:property><con:name>POST_RawRequest</con:name><con:value>POST http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Authorization: Basic NmYwNjE5ZjFmMWFmNDE0NDgxM2NmYzMyMTc0Y2I5MGU6MzM4OTM4MzVFM2QzNDllMUFBNDM1ZGMyMDBBQ2RiY2I=
+Content-Length: 60
+Host: x-customer-api-dev.uk-e1.cloudhub.io
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_162)
+
+[{
+  	"EmailAddress": "POST_srinath515520@test.com",
+	
+  
+}]</con:value></con:property><con:property><con:name>PATCH_RawRequest</con:name><con:value>PATCH http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers/515520 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Authorization: Basic NmYwNjE5ZjFmMWFmNDE0NDgxM2NmYzMyMTc0Y2I5MGU6MzM4OTM4MzVFM2QzNDllMUFBNDM1ZGMyMDBBQ2RiY2I=
+Content-Length: 223
+Host: x-customer-api-dev.uk-e1.cloudhub.io
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_162)
+
+{
+  
+  "FirstName": "Srinath",
+  "LanguageCD": "en",
+  "LastName": "Patchtest_515520",
+  "Newsletter": {
+    "Confirmed": true,
+    "Frequency": 1
+  },
+  "NewsletterSubscribed": true,
+  "SignUpSiteId": 1,
+  "Title": "Mr."
+}</con:value></con:property><con:property><con:name>GET_RawRequest</con:name><con:value>GET http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers/515520 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Authorization: Basic NmYwNjE5ZjFmMWFmNDE0NDgxM2NmYzMyMTc0Y2I5MGU6MzM4OTM4MzVFM2QzNDllMUFBNDM1ZGMyMDBBQ2RiY2I=
+Content-Length: 0
+Host: x-customer-api-dev.uk-e1.cloudhub.io
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_162)
+</con:value></con:property><con:property><con:name>POST_ReReg_RawRequest</con:name><con:value>POST http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers HTTP/1.1
+Accept-Encoding: gzip,deflate
+Content-Type: application/json
+Authorization: Basic NmYwNjE5ZjFmMWFmNDE0NDgxM2NmYzMyMTc0Y2I5MGU6MzM4OTM4MzVFM2QzNDllMUFBNDM1ZGMyMDBBQ2RiY2I=
+Content-Length: 60
+Host: x-customer-api-dev.uk-e1.cloudhub.io
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_162)
+
+[{
+  	"EmailAddress": "POST_srinath515520@test.com",
+	
+  
+}]</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasource" name="DS_Credentials" id="39739d10-cf2f-4e58-ba72-0810e1905790"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>${Properties#Credentials_Path}</file><worksheet>Credentials</worksheet><cell>A2</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>WS_Authorization</con:property><con:property>CRC_Authorization</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="datasource" name="TD" id="b2dd5df9-0953-413c-8c76-69f0643a5ae2"><con:settings/><con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSource type="Excel"><con:configuration><file>${Properties#File_Path}</file><worksheet>PaymentProfile</worksheet><cell>A2</cell><ignoreEmpty>true</ignoreEmpty><evaluateFormulas>false</evaluateFormulas></con:configuration></con:dataSource><con:shared>true</con:shared><con:restartShared>true</con:restartShared><con:property>Payload</con:property><con:completeLastOperation>true</con:completeLastOperation><con:restartOnRun>true</con:restartOnRun></con:config></con:testStep><con:testStep type="restrequest" name="Registration_POST" id="0b3a2fa7-3605-4790-aaff-008adff0c31e"><con:settings/><con:config service="REST Service 21" resourcePath="/api/customers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Registration_POST" id="7c4d20fa-e73c-4662-85fe-d16f591ffbce" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${DS_Credentials#WS_Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request>[{
+  	"EmailAddress": "POST_srinath${#TestCase#CID}@test.com",
+	${TD#Payload}
+  
+}]</con:request><con:originalUri>http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e7ee1a9f-670a-4d12-9672-9926894ef1ff" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>201</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="90859ebe-efde-4f3b-946e-446c927334b9" name="Response SLA"><con:configuration><SLA>3000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="ReRegistration_POST" id="67532a28-df68-41ba-a482-c7cfc38807c1"><con:settings/><con:config service="REST Service 21" resourcePath="/api/customers" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="ReRegistration_POST" id="7c4d20fa-e73c-4662-85fe-d16f591ffbce" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${DS_Credentials#WS_Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request>[{
+  	"EmailAddress": "POST_srinath${#TestCase#CID}@test.com",
+	${TD#Payload}
+  
+}]</con:request><con:originalUri>http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="97329d38-d9ae-40d1-9e5d-3a05ccb7455d" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>409</codes></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="RetriveCustID" id="358a4a65-c697-4eed-aea9-902ff9aa1e03"><con:settings/><con:config><script>def newCustID = context.expand( '${Registration_POST#Response#$[\'details\']}' )
+String CUSTID=newCustID.replaceAll("[^0-9]", "");
+log.info CUSTID
+testRunner.testCase.setPropertyValue("CID",CUSTID.toString())
+</script></con:config></con:testStep><con:testStep type="jdbc" name="DB_Customers" id="d79576d6-43cc-4815-8067-b31d9ab9ec31"><con:settings><con:setting id="prettyPrintResponse">true</con:setting></con:settings><con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dbConnectionName>Customer</con:dbConnectionName><con:driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</con:driver><con:connectionString>jdbc:sqlserver://weu-tst5-sql01.wiggleazuremsdn.wiggle.com:1433;databaseName=Customers;user=svc.mulesoft;password=PASS_VALUE</con:connectionString><con:password>WIGGLEMULEUser</con:password><con:connectionProperties/><con:query>Select CustomerAuthentication.*
+From CustomerAuthentication
+Where CustomerAuthentication.CustomerID =:CustID</con:query><con:storedProcedure>false</con:storedProcedure><con:assertion type="Simple Contains" id="b935abda-2e4b-49d2-8f8e-bcf52951f9f7" name="Contains"><con:configuration><token>Wiggle2019</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:properties><con:property><con:name>CustID</con:name><con:value>${#TestCase#CID}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="restrequest" name="Reg_PATCH" id="8f882aab-55f9-4ba3-a71c-bc4478fc105c"><con:settings/><con:config service="REST Service 22" resourcePath="/api/customers/${#TestCase#CID}" methodName="PATCH" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Reg_PATCH" id="8b9fb08d-4ce2-43b9-822f-9958eaf12782" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${DS_Credentials#WS_Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request>{
+  
+  "FirstName": "Srinath",
+  "LanguageCD": "en",
+  "LastName": "Patchtest_${#TestCase#CID}",
+  "Newsletter": {
+    "Confirmed": true,
+    "Frequency": 1
+  },
+  "NewsletterSubscribed": true,
+  "SignUpSiteId": 1,
+  "Title": "Mr."
+}</con:request><con:originalUri>http://x-customer-api-dev.uk-e1.cloudhub.io/</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="de861c99-4254-4e2b-8bb9-ccf727ef53df" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>204</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="5e614436-4c65-4bca-8c59-50680479be9b" name="Response SLA"><con:configuration><SLA>3000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Reg_GET" id="4740cac6-d702-4f46-b1d7-a67de7982448"><con:settings/><con:config service="REST Service 22" resourcePath="/api/customers/${#TestCase#CID}" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Reg_GET" id="da6715bd-24fe-45f8-b3c3-b10c8235c668" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${DS_Credentials#WS_Authorization}" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://x-customer-api-dev.uk-e1.cloudhub.io</con:endpoint><con:request/><con:originalUri>http://x-customer-api-dev.uk-e1.cloudhub.io/api/customers/6210764056</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="ae7bf7f1-6a5d-4178-bcf9-0b5851703115" name="Valid HTTP Status Codes"><con:settings/><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="7e0c7e1b-8ee5-4dca-92d2-17705e777203" name="Response SLA"><con:configuration><SLA>3000</SLA></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="RawRequest" id="fea49302-bf7a-4c91-a6fe-684ec70644cd"><con:settings/><con:config><script>myRequestStep = testRunner.testCase.getTestStepByName('Registration_POST')
+def POSTrequestData = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+testRunner.testCase.testSteps["Properties"].setPropertyValue( "POST_RawRequest", POSTrequestData )
+
+myRequestStep = testRunner.testCase.getTestStepByName('Reg_PATCH')
+def PATCHrequestData = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+testRunner.testCase.testSteps["Properties"].setPropertyValue( "PATCH_RawRequest", PATCHrequestData )
+
+myRequestStep = testRunner.testCase.getTestStepByName('Reg_GET')
+def GETrequestData = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+testRunner.testCase.testSteps["Properties"].setPropertyValue( "GET_RawRequest", GETrequestData )
+
+myRequestStep = testRunner.testCase.getTestStepByName('ReRegistration_POST')
+def ReRegrequestData = new String(myRequestStep.testRequest.messageExchange.rawRequestData)
+testRunner.testCase.testSteps["Properties"].setPropertyValue( "POST_ReReg_RawRequest", ReRegrequestData )</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="17dcf208-b88a-4ccd-b368-714e02509d98"><con:settings/><con:config><script><![CDATA[def password = context.expand( '${Registration_POST#RawRequest#$[0][\'Password\']}' )
+def HashAlog = context.expand( '${DB_Customers#ResponseAsXml#//Results[1]/ResultSet[1]/Row[1]/HashingAlgorithm[1]}' )
+def ReReg_message = context.expand( '${ReRegistration_POST#Response#$[\'details\']}' )
+
+password = (password =='' ? "OUTCUST" : "INCUST")
+HashAlog = (HashAlog == 'NULL'||''  ? "OUTCUST" : HashAlog)
+
+
+def POST_StatusCode = context.expand( '${Registration_POST#HarResponse#$[\'status\']}' )
+def POST_ReReg_StatusCode = context.expand( '${ReRegistration_POST#HarResponse#$[\'status\']}' )
+def PATCH_StatusCode = context.expand( '${Reg_PATCH#HarResponse#$[\'status\']}' )
+def GET_StatusCode = context.expand( '${Reg_GET#HarResponse#$[\'status\']}' )
+
+
+if(POST_StatusCode == '201' && GET_StatusCode == '200' && PATCH_StatusCode=='204' &&  POST_ReReg_StatusCode=='201' && HashAlog=="OUTCUST")
+{
+
+	return "PASS"
+}
+if(POST_StatusCode == '201' && GET_StatusCode == '200' && PATCH_StatusCode=='204' &&  POST_ReReg_StatusCode=='201' && password=="INCUST")
+{
+	assert HashAlog == 'Wiggle2019'
+	return "PASS"
+}
+else if(POST_StatusCode == '201' && GET_StatusCode == '200' && PATCH_StatusCode=='204' &&  POST_ReReg_StatusCode=='409' && password=="INCUST")
+{
+	assert HashAlog == 'Wiggle2019'
+	return "PASS"
+}
+else
+{
+	return "FAIL"
+}
+]]></script></con:config></con:testStep><con:testStep type="datasink" name="DataSink" id="6e677da8-5ddd-4448-b9d2-e0fe6290ac14"><con:settings/><con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:dataSink type="Excel"><con:configuration><file>${Properties#File_Path}</file><outfile>${Properties#File_Path}</outfile><worksheet>BMO</worksheet><cell>A2</cell><evaluateFormulas>false</evaluateFormulas><append>false</append></con:configuration></con:dataSink><con:properties><con:property><con:name>CustomerID</con:name><con:value>${#TestCase#CID}</con:value></con:property><con:property><con:name>Payload</con:name><con:value>${TD#Payload}</con:value></con:property><con:property><con:name>POSTRawRequest</con:name><con:value>${Properties#POST_RawRequest}</con:value></con:property><con:property><con:name>POSTRawResponse</con:name><con:value>${Registration_POST#RawResponse}</con:value></con:property><con:property><con:name>GETRawRequest</con:name><con:value>${Properties#GET_RawRequest}</con:value></con:property><con:property><con:name>GETRawResponse</con:name><con:value>${Reg_GET#RawResponse}</con:value></con:property><con:property><con:name>PATCHRawRequest</con:name><con:value>${Properties#GET_RawRequest}</con:value></con:property><con:property><con:name>PATCHRawResponse</con:name><con:value>${Reg_PATCH#RawResponse}</con:value></con:property><con:property><con:name>ReRegPOSTRawRequest</con:name><con:value>${Properties#POST_ReReg_RawRequest}</con:value></con:property><con:property><con:name>ReRegPOSTRawResponse</con:name><con:value>${ReRegistration_POST#RawResponse}</con:value></con:property><con:property><con:name>Status</con:name><con:value>${Groovy Script#result}</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="datasourceloop" name="DataSource Loop" id="fdd2af44-aceb-4daf-8f14-ea1f243ef0dd"><con:settings/><con:config><dataSourceStep>TD</dataSourceStep><targetStep>Registration_POST</targetStep><discardResults>true</discardResults></con:config></con:testStep><con:properties><con:property><con:name>CID</con:name><con:value/></con:property></con:properties><con:reportParameters/><con:breakPoints><con:testStepId>4373f88e-a577-4958-98dc-cf4a096925ef</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>e55ccc97-a5a8-475f-a72d-28c97ddf34ad</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>87b6c391-4a42-4d38-9d19-ac0f6ef94a45</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>879eb3e1-cbf5-4d28-85e1-f40759aa7145</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>f903ab54-679e-4fa5-9951-83e9ed7a29a2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>bd352053-19ac-4452-a702-a44b337d29af</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>24ea06b3-37c0-43e0-83dd-6a6a8f86c5f2</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints><con:breakPoints><con:testStepId>1117c69a-bdfe-43e0-baa4-e1aaea3316cb</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:xmlTemplates/><con:parameters/></con:reporting><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository/><con:tags/></con:soapui-project>
