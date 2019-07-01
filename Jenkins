@@ -1,4 +1,3 @@
-
 node {
    def mvnHome
     properties([
@@ -51,21 +50,21 @@ node {
                 sh 'mvn deploy -DmuleDeploy -Denv=$ENVIRONMENT -Danypoint.username=${ANYPOINT_USERNAME} -Danypoint.password=${ANYPOINT_PASSWORD}'
             }
       } else {
-            //echo "Deployment Started"
-            //withCredentials([usernamePassword(credentialsId: 'd26ec363-344f-461b-a1aa-cfd53c565995', passwordVariable: 'ANYPOINT_PASSWORD', usernameVariable: 'ANYPOINT_USERNAME')]) {
-                //bat "mvn deploy -DmuleDeploy -Denv=$ENVIRONMENT -Danypoint.username=${ANYPOINT_USERNAME} -Danypoint.password=${ANYPOINT_PASSWORD}"
+            echo "Deployment Started"
+            withCredentials([usernamePassword(credentialsId: 'd26ec363-344f-461b-a1aa-cfd53c565995', passwordVariable: 'ANYPOINT_PASSWORD', usernameVariable: 'ANYPOINT_USERNAME')]) {
+                bat "mvn deploy -DmuleDeploy -Denv=$ENVIRONMENT -Danypoint.username=${ANYPOINT_USERNAME} -Danypoint.password=${ANYPOINT_PASSWORD}"
             }
       }
    }
    stage('Function Test Cases execution') {
       // Run the maven build
       if (isUnix()) {
-         SoapUIPro(environment: '', pathToProjectFile: 'D:/Wiggle CT/Wiggle-Customer-readyapi-project.xml', pathToTestrunner: 'C:/Program Files/SmartBear/ReadyAPI-2.7.0/bin/testrunner.bat', projectPassword: '', testCase: '', testSuite: '')        
+         SoapUIPro(environment: '', pathToProjectFile: 'C:/Users/mrasakonda/.jenkins/workspace/CTRepository/testScripts/CTDemo-readyapi-project.xml', pathToTestrunner: 'C:/Program Files/SmartBear/ReadyAPI-2.7.0/bin/testrunner.bat', projectPassword: '', testCase: '', testSuite: '')        
       } else {
-         SoapUIPro(environment: '', pathToProjectFile: 'D:/Wiggle CT/Wiggle-Customer-readyapi-project.xml', pathToTestrunner: 'C:/Program Files/SmartBear/ReadyAPI-2.7.0/bin/testrunner.bat', projectPassword: '', testCase: '', testSuite: '')
+         SoapUIPro(environment: '', pathToProjectFile: 'C:/Users/mrasakonda/.jenkins/workspace/CTRepository/testScripts/CTDemo-readyapi-project.xml', pathToTestrunner: 'C:/Program Files/SmartBear/ReadyAPI-2.7.0/bin/testrunner.bat', projectPassword: '', testCase: '', testSuite: '')
          
       }
-   } 
+   }
    if (currentBuild.currentResult == 'FAILURE') {
 		stage('JIRA') {
 			withEnv(['JIRA_SITE=LOCAL']) {
@@ -100,7 +99,7 @@ node {
         stage('Failed') {
             echo "Curretn build status is Failed"
             emailext (
-				attachmentsPattern: '**/Project Report.pdf, **/testScripts/*.xlsx',
+				attachmentsPattern: '**/Project Report.pdf',
                 subject: "Failure: Job '${env.JOB_NAME} ${env.BUILD_NUMBER}'",
                 body: "Check console output at '${env.BUILD_URL}' of '${env.JOB_NAME}'",
                 to: "mahesh.rasakonda@whishworks.com",
